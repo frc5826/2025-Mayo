@@ -6,8 +6,11 @@ import edu.wpi.first.wpilibj.XboxController;
 public class Constants {
 
     public static final XboxController joystick = new XboxController(0);
-    public static final double shooterSpeed = 0.2;
-    public static final int leftShooterID = 11;
-    public static final int rightShooterID = 12;
+    public static final double shooterSpeed = 0.75;
+    public static final int leftShooterID = 3;
+    public static final int rightShooterID = 1;
+    public static final int leftLoaderID = 4;
+    public static final int rightLoaderID = 6;
+    public static final double loaderSpeed = 0.3;
 
 }
