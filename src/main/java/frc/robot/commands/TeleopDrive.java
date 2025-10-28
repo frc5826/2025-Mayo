@@ -25,7 +25,7 @@ public class TeleopDrive extends Command {
         double xSpeed= -Constants.joystick.getRightY();
         double ySpeed= -Constants.joystick.getRightX();
         double turnSpeed= -Constants.joystick.getLeftX();
-        double mult = Units.feetToMeters(16.6);
+        double mult = Units.feetToMeters(16.6*0.5);
         if(Math.abs(xSpeed)<0.15){
          xSpeed=0;
         }

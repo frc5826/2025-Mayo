@@ -7,8 +7,11 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
+import edu.wpi.first.wpilibj2.command.InstantCommand;
+import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.commands.TeleopDrive;
 import frc.robot.subsystems.ShooterSubsystem;
+import frc.robot.subsystems.IntakeSubsystem;
 import frc.robot.subsystems.SwerveSubsystem;
 
 
@@ -16,6 +19,7 @@ public class RobotContainer
 {
     private final SwerveSubsystem swerve=new SwerveSubsystem();
     private final ShooterSubsystem shooter = new ShooterSubsystem();
+    private final IntakeSubsystem intake=new IntakeSubsystem();
 
     public RobotContainer()
     {
@@ -24,7 +28,9 @@ public class RobotContainer
     }
     
     
-    private void configureBindings() {}
+    private void configureBindings() {
+        new Trigger(()->Constants.joystick.getYButton()).onTrue(new InstantCommand(swerve::zeroGyro));
+    }
     
     
     public Command getAutonomousCommand()
