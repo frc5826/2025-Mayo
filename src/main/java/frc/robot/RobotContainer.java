@@ -10,8 +10,9 @@ import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.commands.TeleopDrive;
+import frc.robot.subsystems.IntakeSubsytem;
 import frc.robot.subsystems.ShooterSubsystem;
-import frc.robot.subsystems.IntakeSubsystem;
+import frc.robot.subsystems.ArmSubsystem;
 import frc.robot.subsystems.SwerveSubsystem;
 
 
@@ -19,8 +20,8 @@ public class RobotContainer
 {
     private final SwerveSubsystem swerve=new SwerveSubsystem();
     private final ShooterSubsystem shooter = new ShooterSubsystem();
-    private final IntakeSubsystem intake=new IntakeSubsystem();
-
+    private final ArmSubsystem arm=new ArmSubsystem();
+    private final IntakeSubsytem intake = new IntakeSubsytem();
     public RobotContainer()
     {
         configureBindings();
